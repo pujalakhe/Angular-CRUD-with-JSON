@@ -40,7 +40,7 @@ This project utilizes several npm packages to enhance its functionality:
 ## Installation
 
 These packages are included in the package.json file. You can install them using npm:
-**npm install**
+  npm install
 
 ## Start JSON Server
 
