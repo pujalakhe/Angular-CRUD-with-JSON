@@ -61,6 +61,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## User Interface
 
 ![User Management](image.png)
+https://github.com/user-attachments/assets/dbbecfb7-059d-4136-9b4a-dae45ed73894
 
 ## Running unit tests
 
