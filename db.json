@@ -1,0 +1,100 @@
+{
+  "user": [
+    {
+      "id": "9dcd",
+      "department": "sales",
+      "name": "Puja lakhe",
+      "mobile": "9840256088",
+      "email": "pujalakhe@gmail.com",
+      "gender": "female",
+      "join_date": "2024-09-28",
+      "salary": 25000,
+      "address": "libali",
+      "status": true
+    },
+    {
+      "id": "590b",
+      "department": "IT",
+      "name": "Steel Newman",
+      "mobile": "9875520369",
+      "email": "gewileguda@mailinator.com",
+      "gender": "male",
+      "join_date": "2023-12-21",
+      "salary": 35000,
+      "address": "Ilam",
+      "status": true
+    },
+    {
+      "id": "91d8",
+      "department": "Research and Development",
+      "name": "Nasim Ayala",
+      "mobile": "9845203698",
+      "email": "dubazyw@mailinator.com",
+      "gender": "female",
+      "join_date": "1980-03-29",
+      "salary": 19000,
+      "address": "Dharan",
+      "status": false
+    },
+    {
+      "id": "91d8",
+      "department": "Sales",
+      "name": "Genevieve Bush",
+      "mobile": "9788521033",
+      "email": "mete@mailinator.com",
+      "gender": "male",
+      "join_date": "2002-01-09",
+      "salary": 39000,
+      "address": "Chitwan",
+      "status": false
+    },
+    {
+      "id": "91d8",
+      "department": "Sales",
+      "name": "Demetria Cole",
+      "mobile": "9785455102",
+      "email": "hajiper@mailinator.com",
+      "gender": "male",
+      "join_date": "2006-07-08",
+      "salary": 76000,
+      "address": "Lalitpur",
+      "status": true
+    },
+    {
+      "id": "2ed6",
+      "department": "Accountant",
+      "name": "Xavier Navarro",
+      "mobile": "9884521063",
+      "email": "xazedyq@mailinator.com",
+      "gender": "female",
+      "join_date": "1971-02-14",
+      "salary": 91,
+      "address": "Pokhara",
+      "status": true
+    },
+    {
+      "id": "fa94",
+      "department": "Quality Assurance",
+      "name": "Scarlet Kim",
+      "mobile": "982140560/",
+      "email": "jyqatuboq@mailinator.com",
+      "gender": "male",
+      "join_date": "1981-08-20",
+      "salary": 44000,
+      "address": "Minim earum odio tem",
+      "status": true
+    },
+    {
+      "id": "a881",
+      "department": "Quality Assurance",
+      "name": "Clark Dyer",
+      "mobile": "9875422003",
+      "email": "pocuraf@mailinator.com",
+      "gender": "female",
+      "join_date": "1984-10-03",
+      "salary": 22500,
+      "address": "Kathmandu",
+      "status": false
+    }
+  ]
+}

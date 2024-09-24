@@ -1,0 +1,259 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-8">
+      <!-- USER-LIST -->
+      <div class="card">
+        <div class="card-header bg-primary">
+          <div class="row">
+            <div class="col-6 text-white">
+              <h2 class="p-2">User List</h2>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>Department</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Mobile</th>
+                <th>Address</th>
+                <th>Gender</th>
+                <th>Join Date</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (user of userList; track $index) {
+              <tr>
+                <td>{{ user.department | titlecase }}</td>
+                <td>{{ user.name | titlecase }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.mobile }}</td>
+                <td>{{ user.address | titlecase }}</td>
+                <td>{{ user.gender | titlecase }}</td>
+                <td>{{ user.join_date }}</td>
+                <td>{{ user.status ? "Active" : "In-Active" }}</td>
+                <td class="text-center">
+                  <i
+                    class="fa fa-edit text-primary"
+                    (click)="onEditForm(user)"
+                  ></i>
+                  |
+                  <i
+                    class="fa fa-trash text-danger"
+                    (click)="onDeleteForm(user.id)"
+                  ></i>
+                </td>
+              </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <!-- USER-FORM -->
+      <div class="card">
+        <div class="card-header bg-primary">
+          <div class="row">
+            <div class="col-6 text-white">
+              <h2 class="p-2">{{ editMode ? "Update User" : "Add User" }}</h2>
+            </div>
+            <div class="col-6 text-end p-3">
+              <button class="btn btn-info" (click)="onResetForm(userForm)">
+                Reset
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <form
+            class="row g-3"
+            #userForm="ngForm"
+            (ngSubmit)="onSubmit(userForm)"
+          >
+            <div class="col-12">
+              <select
+                class="form-select"
+                name="department"
+                [(ngModel)]="user.department"
+              >
+                <option value="">Select Department</option>
+                @for (department of departmentList; track $index) {
+                <option>{{ department }}</option>
+                }
+              </select>
+            </div>
+
+            <div class="col-6">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                class="form-contorl"
+                name="name"
+                id="name"
+                required
+                placeholder="Enter your name"
+                [(ngModel)]="user.name"
+                #name="ngModel"
+              />
+              <!-- Validation message for name -->
+              <div
+                *ngIf="name.invalid && (name.touched || name.dirty)"
+                class="text-danger"
+              >
+                Name field can not be empty.
+              </div>
+            </div>
+
+            <div class="col-6">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                class="form-contorl"
+                name="email"
+                id="email"
+                required
+                email
+                placeholder="Enter your email"
+                [(ngModel)]="user.email"
+                #email="ngModel"
+              />
+              <!-- Validation message for email -->
+              <div *ngIf="email.invalid && email.touched" class="text-danger">
+                <div *ngIf="email.errors?.['required']">Email is required.</div>
+                <div *ngIf="email.errors?.['email']">Invalid email format.</div>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <label for="address">Address</label>
+              <input
+                type="address"
+                class="form-contorl"
+                name="address"
+                id="adress"
+                required
+                placeholder="Enter your address"
+                [(ngModel)]="user.address"
+                #address="ngModel"
+              />
+              <!-- Validation message for address -->
+              <div
+                *ngIf="address.invalid && (address.touched || address.dirty)"
+                class="text-danger"
+              >
+                Address filed can not be empty.
+              </div>
+            </div>
+
+            <div class="col-6">
+              <label for="mobile">Mobile No</label>
+              <input
+                type="text"
+                class="form-contorl"
+                name="mobile"
+                id="mobile"
+                required
+                minlength="10"
+                maxlength="10"
+                placeholder="Enter your  number"
+                [(ngModel)]="user.mobile"
+                #mobile="ngModel"
+              />
+              <!-- Validation message for mobile number -->
+              <div *ngIf="mobile.touched" class="text-danger">
+                <div *ngIf="mobile.errors?.['required']">
+                  Mobile number is required.
+                </div>
+                <div
+                  *ngIf="mobile.errors?.['minlength'] || mobile.errors?.['maxlength']"
+                >
+                  Mobile number must be exactly 10 digits.
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="joindate" class="col-12">Join Date</label>
+              <input
+                type="date"
+                class="form-contorl"
+                name="joindate"
+                id="joindate"
+                required
+                placeholder="join date"
+                [(ngModel)]="user.join_date"
+              />
+            </div>
+            <div class="col-6">
+              <label for="salary">Salary</label>
+              <input
+                type="number"
+                class="form-contorl"
+                name="salary"
+                id="salary"
+                required
+                placeholder="Enter your salary"
+                [(ngModel)]="user.salary"
+              />
+            </div>
+            <div class="col-12">
+              <div class="form-check form-check-inline">
+                <input
+                  type="radio"
+                  class="form-check-input"
+                  name="gender"
+                  id="gender"
+                  value="male"
+                  placeholder="Gender"
+                  [(ngModel)]="user.gender"
+                />
+                <label for="" class="form-check-label">Male</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  type="radio"
+                  class="form-check-input"
+                  name="gender"
+                  id="gender"
+                  value="female"
+                  placeholder="Gender"
+                  [(ngModel)]="user.gender"
+                />
+                <label for="" class="form-check-label">Female</label>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="form-check">
+                <input
+                  type="checkbox"
+                  class="form-contorl"
+                  name="status"
+                  id="status"
+                  class="form-check-input"
+                  placeholder="Status"
+                  [(ngModel)]="user.status"
+                />
+                <label for="" class="form-check-label">Active </label>
+              </div>
+            </div>
+            <div class="col-12">
+              <button
+                [disabled]="userForm.invalid"
+                class="btn btn-primary w-100"
+                type="submit"
+              >
+                {{ editMode ? "UPDATE" : "SAVE" }}
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
