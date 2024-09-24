@@ -13,42 +13,6 @@
       "status": true
     },
     {
-      "id": "590b",
-      "department": "IT",
-      "name": "Steel Newman",
-      "mobile": "9875520369",
-      "email": "gewileguda@mailinator.com",
-      "gender": "male",
-      "join_date": "2023-12-21",
-      "salary": 35000,
-      "address": "Ilam",
-      "status": true
-    },
-    {
-      "id": "91d8",
-      "department": "Research and Development",
-      "name": "Nasim Ayala",
-      "mobile": "9845203698",
-      "email": "dubazyw@mailinator.com",
-      "gender": "female",
-      "join_date": "1980-03-29",
-      "salary": 19000,
-      "address": "Dharan",
-      "status": false
-    },
-    {
-      "id": "91d8",
-      "department": "Sales",
-      "name": "Genevieve Bush",
-      "mobile": "9788521033",
-      "email": "mete@mailinator.com",
-      "gender": "male",
-      "join_date": "2002-01-09",
-      "salary": 39000,
-      "address": "Chitwan",
-      "status": false
-    },
-    {
       "id": "91d8",
       "department": "Sales",
       "name": "Demetria Cole",
@@ -95,6 +59,42 @@
       "salary": 22500,
       "address": "Kathmandu",
       "status": false
+    },
+    {
+      "id": "79c8",
+      "department": "Administrative",
+      "name": "Rajani Navarro",
+      "mobile": "9877542018",
+      "email": "navarrorajani22@gmail.com",
+      "gender": "female",
+      "join_date": "2024-09-04",
+      "salary": 25500,
+      "address": "Dharan",
+      "status": true
+    },
+    {
+      "id": "35c2",
+      "department": "Customer Service",
+      "name": "Althea Jimenez",
+      "mobile": "9844520785",
+      "email": "altheajimenez@gmail.com",
+      "gender": "female",
+      "join_date": "1985-06-10",
+      "salary": 1400,
+      "address": "Chitwan",
+      "status": true
+    },
+    {
+      "id": "91d8",
+      "department": "Sales",
+      "name": "Cassady Howard",
+      "mobile": "9875420025",
+      "email": "cassadyhoward@gmail.com",
+      "gender": "female",
+      "join_date": "1978-12-19",
+      "salary": 14500,
+      "address": "Pokhara",
+      "status": true
     }
   ]
 }
